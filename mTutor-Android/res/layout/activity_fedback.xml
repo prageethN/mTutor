@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient_bg"
+    >
+    <LinearLayout android:layout_width="match_parent" android:layout_height="fill_parent" android:id="@+id/linearLayoutMain"  android:orientation="vertical">
+    <LinearLayout style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:src="@drawable/title_about"
+            android:onClick="onClickAbout" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/title_search"
+            android:onClick="onClickSearch" />
+    </LinearLayout>
+<TableLayout 
+   
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <TableRow android:weightSum="100" android:paddingBottom="12dp"> 
+        <TextView android:layout_weight="100" android:paddingBottom="10dp" android:paddingTop="10dp"
+            android:text="Feedback Details"
+            android:background="@color/gray"
+            android:textColor="@color/white"
+            android:paddingLeft="10dip"
+            />
+    </TableRow>
+     <TableRow android:weightSum="100"  android:paddingTop="10dp" android:paddingRight="10dp" > 
+        <TextView android:layout_weight="20"
+            android:text="Name:"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingLeft="5dp"
+            />
+        <EditText android:layout_weight="80"
+            android:id="@+id/txtName"  >
+        
+            
+          </EditText>
+    </TableRow >
+   <View android:id="@+id/divider"
+    android:background="@color/gray"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:longClickable="true"
+    
+     />
+    <TableRow android:weightSum="100" android:paddingTop="10dp" android:paddingRight="10dp">
+        <TextView android:paddingLeft="5dp" android:textColor="@color/black" android:text="Email:" android:layout_weight="20" android:textStyle="bold"></TextView>
+        <EditText android:id="@+id/txtEmail" android:inputType="textEmailAddress" android:layout_weight="80"></EditText>
+    </TableRow>
+    <View android:id="@+id/divider"
+    android:background="@color/gray"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:longClickable="true"
+    
+     />
+    <TableRow android:weightSum="100" android:paddingTop="10dp" android:paddingRight="10dp" >
+        <TextView 
+            android:text="Heading"
+            android:layout_weight="20"
+            android:textColor="@color/black"
+            android:paddingLeft="5dp"
+            android:textStyle="bold"
+            
+            />
+        <EditText 
+         	  android:phoneNumber="true"
+            android:id="@+id/txtHeading" 
+            android:layout_weight="80" android:hint="Ex:Comment,problem, etc."/>
+    </TableRow>
+   <View android:id="@+id/divider"
+    android:background="@color/gray"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:longClickable="true"
+    
+     />
+    <TableRow android:weightSum="100"  android:paddingTop="10dp" android:paddingRight="10dp">
+        <TextView android:paddingLeft="5dp" android:textColor="@color/black" android:text="Description:" android:layout_weight="20" android:textStyle="bold"></TextView>
+        <EditText android:lines="3" android:id="@+id/txtFeedbak" android:layout_weight="80"></EditText>
+    </TableRow>
+ <View android:id="@+id/divider"
+    android:background="@color/gray"
+    android:layout_width="fill_parent"
+    android:layout_height="1dp"
+    android:longClickable="true"
+    
+     />
+    <TableLayout android:paddingTop="10dp">
+ 
+     <TableRow android:layout_width="fill_parent" android:paddingTop="10dp" android:gravity="center">
+     <Button
+         android:id="@+id/btn_Feedback" android:gravity="center"
+         android:text="Submit Feedback"
+         android:textColor="#000000"
+         android:textSize="20dp" />
+          </TableRow>
+          
+          <TableRow android:layout_height="fill_parent" android:layout_width="fill_parent" android:weightSum="100" android:paddingTop="10dp">
+        <TextView android:layout_width="fill_parent" android:background="@color/title_background" android:layout_weight="100"
+            android:height="1dp" />
+     </TableRow>
+            
+</TableLayout>
+</TableLayout>
+
+</LinearLayout>
+</LinearLayout>

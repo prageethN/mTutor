@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1" android:versionName="1.0" package="com.mtutor.dashboard"
+	android:installLocation="preferExternal">
+	<original-package></original-package>
+
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<application android:theme="@style/Theme.D1" android:icon="@drawable/utility_icon"
+		android:label="@string/app_name">
+		<activity android:name="com.mtutor.main.LoginActivity"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+		</intent-filter>
+		</activity>
+
+		<activity android:name=".HomeActivity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature1">
+			<!-- <intent-filter> <action android:name="android.intent.action.MAIN" 
+				/> <category android:name="android.intent.category.LAUNCHER" /> </intent-filter> -->
+		</activity>
+		<activity android:name=".F1Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature1" />
+		<activity android:name=".F2Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature2" />
+		<activity android:name=".F3Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature3" />
+		<activity android:name=".F4Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature4" />
+		<activity android:name=".F5Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature5" />
+		<activity android:name=".F6Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature6" />
+		<activity android:name=".AboutActivity" android:theme="@style/Theme.D1"
+			android:label="@string/title_about" />
+		<activity android:name="com.mtutor.dashboard.SearchActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_search" />
+		<activity android:name="com.mtutor.main.MainActivity" />
+		<activity android:name="com.mtutor.scannar.ScanActivity" />
+		<activity android:name="com.mtutor.publication.ItemInfoActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_item_description" />
+		<activity android:name="com.mtutor.user.SignUpActivity"></activity>
+		<activity android:name="com.mtutor.user.EditProfileActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_edit_profile" />
+
+		<activity android:name="com.mtutor.publication.AttachmentListActivity"
+			android:theme="@style/Theme.D1" android:label="@string/attachment_list">
+		</activity>
+		<activity android:name="com.mtutor.publication.AttachmentInfoActivity"
+			android:theme="@style/Theme.D1" android:label="@string/attachment_info"></activity>
+		<activity android:name="com.mtutor.savedsearch.SavedSearchResultActivity"
+			android:theme="@style/Theme.D1" android:label="@string/saved_search"></activity>
+		<activity android:name="com.mtutor.watchlist.WatchListSettingsActivity"
+			android:theme="@style/Theme.D1" android:label="@string/watchlist_settings"></activity>
+		<activity android:name="com.mtutor.activities.RecentActivitiesActivity"
+			android:theme="@style/Theme.D1" android:label="@string/recent_activity"></activity>
+		<activity android:name="com.mtutor.recentviews.RecentViewActivity"
+			android:theme="@style/Theme.D1" android:label="@string/recent_view"></activity>
+		<activity android:name="com.mtutor.connection.MyConnectionsActivity"
+			android:theme="@style/Theme.D1" android:label="@string/my_connections"></activity>
+		<activity android:name="com.mtutor.connection.ConnectionsActivity"
+			android:theme="@style/Theme.D1" android:label="@string/connections"></activity>
+		<activity android:name="com.mtutor.connection.AddConnectionActivity"
+			android:theme="@style/Theme.D1" android:label="@string/add_connection"></activity>
+		<activity android:name="com.mtutor.user.UserProfileActivity"
+			android:theme="@style/Theme.D1" android:label="@string/user_profile"></activity>
+		<activity android:name="com.mtutor.connection.UserConnectionsActivity"
+			android:theme="@style/Theme.D1" android:label="@string/connections"></activity>
+		<activity android:name="com.mtutor.settings.FeedbackActivity"
+			android:theme="@style/Theme.D1" android:label="@string/feedback"></activity>
+		<activity android:name="com.mtutor.publication.RecomendationActivity"
+			android:theme="@style/Theme.D1" android:label="@string/recomendation"></activity>
+		<activity android:theme="@style/Theme.D1"
+			android:name="com.mtutor.connection.ConnectionRequestActivity"
+			android:label="@string/con_req"></activity>
+		<activity android:name="com.mtutor.tutorial.TuteOneActivity">
+		</activity>
+		<activity android:theme="@style/Theme.D1" android:name="com.mtutor.attachment.AttachmentActivity" android:label="@string/att_info">
+		
+		</activity>
+		<activity android:name="com.mtutor.attachment.AttachmentSuggetionActivity"></activity>
+		<activity android:name="com.mtutor.attachment.AttachmentInfoActivity"></activity>
+		<activity android:name="com.mtutor.attachment.AttachmentCommentActivity"></activity>
+		<activity android:name="com.mtutor.attachment.AttachmentViewActivity"></activity>
+	</application>
+	<uses-sdk android:minSdkVersion="10" />
+
+</manifest> 

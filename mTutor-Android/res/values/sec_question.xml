@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="sec_question">
+        <item>What was your childhood nickname?</item>
+        <item>What is the name of your best friend from childhood?</item>
+        <item>What was your first mobile phone number?</item>
+        <item>What is your library card number?</item>
+    </string-array>
+       
+</resources>

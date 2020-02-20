@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@drawable/gradient_bg">
+
+	<LinearLayout style="@style/TitleBar">
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_home" android:src="@drawable/title_home"
+			android:onClick="onClickHome" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<TextView style="@style/TitleBarText" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_about" android:src="@drawable/title_about"
+			android:onClick="onClickAbout" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_search" android:src="@drawable/title_search"
+			android:onClick="onClickSearch" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_margin="5dip"
+		android:orientation="vertical" android:background="@drawable/rounded_corner_bg">
+		<TextView android:text="Prageeeth Gangabada"
+			android:layout_width="match_parent" android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_height="wrap_content" android:textColor="@color/gray_dark"
+			android:padding="5dip" android:singleLine="true" android:id="@+id/txtName" />
+	</LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/rounded_corner_transparent"
+		android:orientation="horizontal" android:padding="5dip"
+		android:layout_marginLeft="5dip" android:layout_marginRight="5dip"
+		android:layout_marginBottom="5dip">
+
+		<!-- ListRow Left sied Thumbnail image -->
+		<LinearLayout android:id="@+id/thumbnail"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="3dip" android:layout_alignParentLeft="true"
+			android:background="@drawable/rounded_corner_bg"
+			android:layout_marginRight="5dip" android:clickable="true" android:onClick="onClickPickImage">
+
+			<ImageView android:layout_width="80dip"
+				android:layout_margin="3dip" android:layout_height="80dip"
+				android:src="@drawable/default_user" android:id="@+id/imgProfPic" />
+
+		</LinearLayout>
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_margin="5dip"
+			android:orientation="vertical" android:layout_toRightOf="@+id/thumbnail">
+			<TextView android:text="Undergraduate of Faculty of Information Technology"
+				android:textSize="14sp" android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:textColor="@color/gray_dark"
+				android:padding="5dip" android:id="@+id/txtPosition" />
+			<TextView android:text="University of Moratuwa"
+				android:textSize="12sp" android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:textColor="@color/gray_dark"
+				android:padding="5dip" android:singleLine="true" android:id="@+id/txtWorkPlace" />
+		</LinearLayout>
+
+	</RelativeLayout>
+	<View android:id="@+id/divider" android:background="@color/title_background"
+		android:layout_width="fill_parent" android:layout_height="1dp"
+		android:layout_marginBottom="5dip" />
+	<ScrollView android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="fill_parent" android:id="@+id/linearLayoutMain"
+			android:orientation="vertical">
+
+			<RelativeLayout android:id="@+id/relLayoutManageConnections"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:background="@drawable/list_selecter" android:orientation="horizontal"
+				android:padding="5dip" android:clickable="true">
+
+				<!-- ListRow Left sied Thumbnail image -->
+				<LinearLayout android:id="@+id/thumbnail"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:padding="10dip" android:layout_alignParentLeft="true"
+					android:layout_marginRight="5dip">
+
+					<ImageView android:id="@+id/list_image"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:src="@drawable/ic_connections" />
+
+				</LinearLayout>
+
+				<!-- Title Of Song -->
+				<TextView android:id="@+id/title" android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+					android:layout_toRightOf="@+id/thumbnail" android:text="Manage Connections"
+					android:textColor="#040404" android:typeface="sans"
+					android:textSize="15dip" android:textStyle="bold" />
+
+				<!-- Artist Name -->
+				<TextView android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:layout_below="@id/title"
+					android:textColor="#343434" android:textSize="10dip"
+					android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+					android:text="you have 10 connections" android:id="@+id/txtConnectionCount" />
+
+
+
+				<!-- Rightend Arrow -->
+				<ImageView android:layout_width="wrap_content"
+					android:layout_height="wrap_content" android:src="@drawable/arrow1"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true" />
+
+			</RelativeLayout>
+			<TableLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+
+				<RelativeLayout android:id="@+id/relLayoutCurrentPosition"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@color/gray_start" android:orientation="horizontal"
+					android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/ic_menu_position" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="Current position"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Ex: Undergraduate at Faculty of Engineering" android:id="@+id/txtEditPosition">
+						<requestFocus></requestFocus>
+					</EditText>
+				</RelativeLayout>
+				<View android:id="@+id/divider" android:background="@drawable/gray_gradient"
+					android:layout_width="fill_parent" android:layout_height="1dp" />
+				<RelativeLayout android:id="@+id/relLayoutWorkingPlace"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@color/gray_start" android:orientation="horizontal"
+					android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/ic_menu_place" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="Working place"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Ex: University of Moratuwa"
+						android:id="@+id/txtEditWorkPlace" />
+
+				</RelativeLayout>
+				<TableRow android:weightSum="100" android:paddingBottom="12dp">
+					<TextView android:layout_weight="100"
+						android:paddingBottom="10dp" android:paddingTop="10dp"
+						android:text="Basic Information" android:background="@color/gray"
+						android:textColor="@color/white" android:paddingLeft="10dip" />
+				</TableRow>
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:layout_weight="20" android:text="First Name:"
+						android:textStyle="bold" android:textColor="@color/black"
+						android:paddingLeft="5dp" />
+					<EditText android:layout_weight="80" android:id="@+id/txtFirstname" />
+
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp"
+					android:layout_width="wrap_content">
+					<TextView android:layout_weight="20" android:text="Last Name:"
+						android:textColor="@color/black" android:paddingLeft="5dp"
+						android:textStyle="bold" />
+					<EditText android:layout_weight="80" android:id="@+id/txtLastname" />
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:paddingLeft="5dp" android:textColor="@color/black"
+						android:text="Email:" android:layout_weight="20"
+						android:textStyle="bold"></TextView>
+					<EditText android:inputType="textEmailAddress"
+						android:layout_weight="80" android:id="@+id/txtEmail"></EditText>
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:paddingLeft="5dp" android:textColor="@color/black"
+						android:text="Address:" android:layout_weight="20"
+						android:textStyle="bold"></TextView>
+					<EditText android:lines="3" android:layout_weight="80" android:id="@+id/txtAddress" android:gravity="top"></EditText>
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:text="Mobile No:" android:layout_weight="20"
+						android:textColor="@color/black" android:paddingLeft="5dp"
+						android:textStyle="bold" />
+					<EditText android:phoneNumber="true"
+						android:layout_weight="80" android:id="@+id/txtContactNo" />
+				</TableRow>
+				<TableRow android:weightSum="100" android:background="@color/gray">
+					<TextView android:layout_weight="100" android:paddingTop="10dp"
+						android:paddingBottom="10dp" android:text="Social media"
+
+						android:textColor="@color/white" android:paddingLeft="10dip" />
+				</TableRow>
+				<!-- Facebook -->
+				<RelativeLayout android:id="@+id/relLayoutFacebook"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@drawable/list_selector_plain"
+					android:orientation="horizontal" android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/icn_facebook" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="Facebook"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Enter your Facebook profile url here"
+						android:id="@+id/txtFaceBook" />
+
+				</RelativeLayout>
+				<!-- Google+ -->
+				<RelativeLayout android:id="@+id/relLayoutGooglePlus"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@drawable/list_selector_plain"
+					android:orientation="horizontal" android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/icn_gplus" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="Google+"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Enter your Google+ profile url here"
+						android:id="@+id/txtGooglePlus" />
+
+				</RelativeLayout>
+				<!-- LinkedIn -->
+				<RelativeLayout android:id="@+id/relLayoutLinkedIn"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@drawable/list_selector_plain"
+					android:orientation="horizontal" android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/icn_linkedin" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="LinkedIn"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Enter your Linkedin profile url here"
+						android:id="@+id/txtLinkedIn" />
+
+				</RelativeLayout>
+				<!-- Skype -->
+				<RelativeLayout android:id="@+id/relLayoutActivities"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@drawable/list_selector_plain"
+					android:orientation="horizontal" android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/icn_skype" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="Skype"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Enter your skype ID here"
+						android:id="@+id/txtSkype" />
+
+				</RelativeLayout>
+				<!-- Twitter -->
+				<RelativeLayout android:id="@+id/relLayoutTwitter"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:background="@drawable/list_selector_plain"
+					android:orientation="horizontal" android:padding="5dip">
+
+					<!-- ListRow Left sied Thumbnail image -->
+					<LinearLayout android:id="@+id/thumbnail"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:padding="10dip" android:layout_alignParentLeft="true"
+						android:layout_marginRight="5dip">
+
+						<ImageView android:id="@+id/list_image"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:src="@drawable/icn_twitter" />
+
+					</LinearLayout>
+
+					<!-- Title Of Song -->
+					<TextView android:id="@+id/title" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+						android:layout_toRightOf="@+id/thumbnail" android:text="Twiter"
+						android:textColor="#040404" android:typeface="sans"
+						android:textSize="15dip" android:textStyle="bold" />
+
+					<!-- Artist Name -->
+					<EditText android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_below="@id/title"
+						android:textColor="#343434" android:textSize="12dip"
+						android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+						android:paddingRight="10dp" android:hint="Enter your twitter profile url here"
+						android:id="@+id/txtTwitter" />
+
+				</RelativeLayout>
+				<TableRow android:weightSum="100" android:paddingBottom="12dp">
+					<TextView android:layout_weight="100"
+						android:paddingBottom="10dp" android:paddingTop="10dp"
+						android:text="Account Information" android:background="@color/gray"
+						android:textColor="@color/white" android:paddingLeft="10dip" />
+				</TableRow>
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:text="Username:" android:textColor="@color/black"
+						android:paddingLeft="5dp" android:layout_weight="20"
+						android:textStyle="bold" />
+					<EditText android:id="@+id/txtUsername" android:enabled="false"
+						android:layout_weight="80" />
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:text="Password:" android:textColor="@color/black"
+						android:paddingLeft="5dp" android:layout_weight="20"
+						android:textStyle="bold" />
+					<EditText android:id="@+id/txtPassword" android:password="true"
+						android:layout_weight="80" />
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:text="Repeat Password:"
+						android:textColor="@color/black" android:paddingLeft="5dp"
+						android:layout_weight="20" android:textStyle="bold" />
+					<EditText android:id="@+id/txtRepeatPassword"
+						android:password="true" android:layout_weight="80" />
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:text="Security Question:"
+						android:textColor="@color/black" android:paddingLeft="5dp"
+						android:layout_weight="20" android:textStyle="bold" />
+					<Spinner android:id="@+id/spSecQuestion"
+						android:drawSelectorOnTop="true" android:layout_weight="80" />
+				</TableRow>
+				<View android:id="@+id/divider" android:background="@drawable/gradient_bg_hover"
+					android:layout_width="fill_parent" android:layout_height="1dp"
+					android:layout_marginBottom="5dip" />
+				<TableRow android:weightSum="100" android:paddingRight="10dp">
+					<TextView android:text="Answer:" android:textColor="@color/black"
+						android:paddingLeft="5dp" android:layout_weight="20"
+						android:textStyle="bold" />
+					<EditText android:id="@+id/txtAnswer"
+
+						android:layout_weight="80" />
+				</TableRow>
+				<TableLayout android:paddingTop="10dp">
+
+					<TableRow android:layout_width="fill_parent"
+						android:paddingTop="10dp" android:gravity="center">
+						<Button android:id="@+id/btn_signup" android:gravity="center"
+							android:text="Update Account Information" android:textColor="#000000"
+							android:textSize="20dp" android:onClick="onClickUpdate"/>
+					</TableRow>
+
+					<TableRow android:layout_width="fill_parent"
+						android:weightSum="100" android:paddingTop="10dp">
+						<TextView android:layout_width="fill_parent"
+							android:background="@color/title_background"
+							android:layout_weight="100" android:height="1dp" />
+					</TableRow>
+					<TableRow android:layout_width="fill_parent"
+						android:paddingTop="10dp" android:weightSum="1"
+						android:background="@color/white">
+						<ImageView android:layout_width="wrap_content"
+							android:layout_weight="1" android:layout_height="wrap_content"
+							android:src="@drawable/icn_margin" android:layout_gravity="center" />
+					</TableRow>
+
+				</TableLayout>
+			</TableLayout>
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
